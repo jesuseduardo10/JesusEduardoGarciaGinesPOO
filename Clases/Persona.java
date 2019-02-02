@@ -1,4 +1,4 @@
-import java.util.Scanner;
+  import java.util.Scanner;
 
 public class Persona{
 
@@ -14,16 +14,10 @@ public class Persona{
         double imc = peso/(Math.pow(altura,2));
          if (imc<20){
             res=-1;
-            System.out.println("SU IMC ES: "+imc+" \nUsted tiene Peso Bajo");
-    
          }else if(imc>=20 && imc <=25){
              res= 0;
-             System.out.println("SU IMC ES: "+imc+" \nUsted tiene peso Ideal");
-         }else{
-                 res=1;
-                 System.out.println("SU IMC ES: "+imc+" \nUsted tiene Sobrepeso");
-             }
-
+         }else
+            res= 1;
                   return res;
      }
     
@@ -115,7 +109,19 @@ public static void main(String[] args) {
      System.out.println(persona1.toString());
      System.out.println("Usted es mayor de edad: "+persona1.esMayorDeEdad());
      persona1.calcularImc();
-    
+     if ( persona1.calcularImc()<0){
+        
+        System.out.println("\nUsted tiene Peso Bajo");
+
+     }else if(persona1.calcularImc()>0){
+         System.out.println("\nUsted tiene Sobrepeso");
+      
+     }else{
+        System.out.println("\nUsted tiene peso Ideal");
+            
+         }
+
+
     }
 
     
