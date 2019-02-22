@@ -24,6 +24,10 @@ public class Estudiante {
          edad1.anioN =scanner.nextDouble();
        
       
+<<<<<<< HEAD
+=======
+        double edad = edad1.obtenerEdad();
+>>>>>>> 34c2ffeca9540f2eb99e32c6e23d2db1175f685c
         System.out.println(edad1.toString()); 
         }
     }
